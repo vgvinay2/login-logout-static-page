@@ -65,3 +65,18 @@ $(function() {
     });
 
 });
+
+$(document).ready(function() {
+    $('#login-form').validate({
+        rules: {
+            "user[email]": {
+                required: true
+            }
+        },
+        messages: {
+            "user[email]": {
+                required: "Email should not be blank"
+            }
+        }
+    });
+});
